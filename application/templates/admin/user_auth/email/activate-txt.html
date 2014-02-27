@@ -1,0 +1,18 @@
+<!--{CONFIG website_name}-->
+
+亲爱的用户{$username}：
+     您好，首先感谢您对于
+<!--{CONFIG website_name}-->
+的支持，我们在下面列出您的注册详细，确保您的账号安全。验证您的电子邮件地址，请点击此链接：{BUILDURL admin/auth/activate/$uid/$new_email_key} 
+     链接不起作用？复制以下链接到浏览器地址栏：
+     {BUILDURL admin/auth/activate/$uid/$new_email_key}
+                
+               
+      请验证您的电子邮件。
+      在{$activation_period}个小时内，否则将成为您的注册无效。
+      您将不得不再次注册，或联系网站管理员。
+ 此为系统邮件，请勿回复 Copyright <!--{CONFIG website_name}--> <!--{echo date('Y',time())}--> All Right Reserved
+<!--{CONFIG website_name}-->
+团队
+<!--{echo date('Y年m月d日',time())}-->
+反馈邮箱 : {$webmaster_email} 

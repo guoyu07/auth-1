@@ -1,0 +1,49 @@
+<!--{template admin/user_auth/header}-->
+<div class="container">
+  <form action="{BUILDURL admin/auth/register}" method="post" target="_top"  onsubmit="return checkform(this);" id="loginform" name="loginform">
+    <h2 style="display:none"><!--{CONFIG website_name}-->后台管理</h2>
+    <div class="serContBox">
+      <div class="serLoginLeft"><img src="{BASE_STYLES}admin/images/serimgl.jpg"/></div>
+      <div class="serLoginRight">
+        <h3>注册账号</h3>
+        <ul class="serInput">
+          <li> <span class="sertext">用户名:</span> <span class="serinbox">
+            <input type="text" name="username" class="sertxt" id="username" value="">
+            </span>
+            <div class="clear"></div>
+          </li>
+          <li> <span class="sertext">邮  箱:</span> <span class="serinbox">
+            <input type="text" name="email" class="sertxt" id="email" value="">
+            </span>
+            <div class="clear"></div>
+          </li>
+          <li> <span class="sertext">密  码:</span> <span class="serinbox">
+            <input type="password" name="password" class="sertxt" id="password" value="">
+            </span>
+            <div class="clear"></div>
+          </li>
+           <li> <span class="sertext">确认密码:</span> <span class="serinbox">
+            <input type="password" name="confirm_password" class="sertxt" id="confirm_password" value="">
+            </span>
+            <div class="clear"></div>
+          </li>
+          <li> <span class="sertext">验证码:</span> <span class="serinbox" style="position:relative">
+            <input type="text" name="imgcode" class="sertxt" id="imgcode" value="" style="width:80px;"  onfocus="document.getElementById('showcode').style.display='';" />
+            <div  id="showcode" CLASS="" style="position:absolute;top:0px;left:100px;display:none; cursor:pointer"> <img src="{BUILDURL api/authcode/show}" onclick="changcode(this);" alt="点击刷新" title="点击刷新" lang="{BUILDURL api/authcode/show}"/> </div>
+            </span>
+            <div class="clear"></div>
+          </li>
+          <li> <span class="serbtl">
+            <input type="hidden" name="dosubmit" value="1" />
+            <input type="submit" name="submit" value="注&nbsp;册" class="serbtn" tabindex="3">
+            </span> <span class="serbtr">
+            <a href="{BUILDURL admin/auth}" style="line-height:35px;">登&nbsp;录</a>
+            </span>
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+<!--{template admin/user_auth/footer}-->

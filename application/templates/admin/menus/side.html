@@ -1,0 +1,15 @@
+<!--{eval function shownavs($datas,$ts='display:block'){ }-->
+
+<ul>
+  <!--{loop $datas $k $v}-->
+  <!--{if isset($v['children'])&&$v['children']}-->
+  <li class="upl"> <a class="sidelist" href="{BUILDURL admin/content/getcontent/$v['id']}?parentid=1" >{$v['catname']}</a>
+    <!--{eval shownavs($v['children'],'display:none')}-->
+    <!--{else}-->
+  <li> <a class="sidelist" href="{BUILDURL admin/content/getcontent/$v['id']}?parentid=1" >{$v['catname']}</a>
+    <!--{/if}-->
+  </li>
+  <!--{/loop}-->
+</ul>
+<!--{eval }}-->
+<!--{eval shownavs($datalist)}-->

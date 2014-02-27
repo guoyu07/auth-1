@@ -1,0 +1,34 @@
+<!--{template admin/header}-->
+<h3><strong>用户中心</strong>&nbsp;&nbsp;<a href="{BUILDURL admin/appuser}">用户列表</a>&nbsp;&nbsp;<a href="{BUILDURL admin/appuser/add}">添加用户</a></h3>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"class="msgtable"> 
+  <thead>
+    <tr>
+      <td width="17%" >用户名</td>
+      <td width="17%" >邮箱</td>
+      <td width="16%" >用户角色</td>
+      <td width="27%" >创建时间</td>
+      <td width="16%" >操作</td>
+    </tr>
+  </thead>
+  <!--{loop $datalist $k $v}-->
+  <tr>
+    <td >{$v['username']}</td>
+    <td >{$v['email']}</td>
+    <td >{$userroles[$v['roleid']]['subject']}</td>
+    <td >{$v['created']}</td>
+    <td ><a  href="{BUILDURL admin/appuser/edit/$v['id']}">修改</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a   href="{BUILDURL admin/appuser/delete/$v['id']}" lang="delete" onclick="return deletedata('{BUILDURL admin/appuser/delete/$v['id']/ajax}','{BUILDURL admin/appuser}')">删除</a>&nbsp;&nbsp;&nbsp;<a href="javascript:showboxs({$v['id']})" style="display:none">更多</a></td>
+  </tr>
+  <!--{/loop}-->
+</table>
+<br/>
+<br/>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="clear:both"  >
+  <tr>
+    <td align="center" ><center>
+        {$pagination}
+      </center></td>
+  </tr>
+</table>
+<br/>
+<br>
+<!--{template admin/footer}-->

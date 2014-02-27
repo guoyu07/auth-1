@@ -1,0 +1,62 @@
+<ul>
+  <li class="upl"><a href="{BASE_URL}" target="_blank">首页</a></li>
+  <!--{if isset($menus['1'])&&$menus['1']}-->
+  <li class="upl" id="help"><a name="nav01" href="{BUILDURL admin/help}">使用手册</a> <b></b>
+    <ul style="display: none; ">
+      <!--{loop $menus['1'] $k $v}-->
+      <li><a href="{$v['url']}">{$v['subject']}</a></li>
+      <!--{/loop}-->
+    </ul>
+  </li>
+  <!--{/if}-->
+  <!--{if isset($menus['2'])&&$menus['2']}-->
+  <li class="upl"  id="document" style="display: none; "><a name="nav01" href="{BUILDURL admin/document}">开发手册</a> <b></b>
+    <ul style="display: none; ">
+      <!--{loop $menus['2'] $k $v}-->
+      <li><a href="{$v['url']}">{$v['subject']}</a></li>
+      <!--{/loop}-->
+    </ul>
+  </li>
+  <!--{/if}-->
+  <!--{if isset($menus['3'])&&$menus['3']}-->
+  <li class="upl" id="appuser"><a name="nav07" href="#">用户管理</a>
+    <ul style="display: none; ">
+      <!--{loop $menus['3'] $k $v}-->
+      <li><a href="{$v['url']}" >{$v['subject']}</a></li>
+      <!--{/loop}-->
+    </ul>
+  </li>
+  <!--{/if}-->
+  <!--{if isset($menus['4'])&&$menus['4']}-->
+  <li class="upl" id="authaction"  style="display: none; "><a name="nav01" href="#">用户中心</a><b></b>
+    <ul style="display: none; ">
+      <!--{loop $menus['4'] $k $v}-->
+      <li><a href="{$v['url']}">{$v['subject']}</a></li>
+      <!--{/loop}-->
+    </ul>
+  </li>
+  <!--{/if}-->
+  <!--{if isset($menus['5'])&&$menus['5']}-->
+  <li class="upl" id="openoauth"><a name="nav07" href="#">开放平台</a>
+    <ul style="display: none; ">
+      <!--{loop $menus['5'] $k $v}-->
+      <li><a href="{$v['url']}">{$v['subject']}</a></li>
+      <!--{/loop}-->
+    </ul>
+  </li>
+  <!--{/if}-->
+  <li class="upl" id="system"><a name="nav07" href="#">系统</a>
+    <ul style="display: none; ">
+      <!--{if isset($menus['6'])&&$menus['6']}-->
+      <!--{loop $menus['6'] $k $v}-->
+      <!--{if $v['subject']=='模板缓存'}-->
+     <li><a rel="group" href="{BUILDURL admin/templates/cache}" onclick="cachetemplates('{BUILDURL admin/templates/cache/ajax}?format=json');return false;" >模板缓存</a></li>
+      <!--{else}-->
+      <li><a href="{$v['url']}">{$v['subject']}</a></li>
+      <!--{/if}-->
+      <!--{/loop}-->
+      <!--{/if}-->
+      <li><a rel="group" href="{BUILDURL admin/auth/logout}">退出系统</a></li>
+    </ul>
+  </li>
+</ul>

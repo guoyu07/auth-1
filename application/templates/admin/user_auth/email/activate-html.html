@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!--{CONFIG website_name}--></title>
+</head>
+<body>
+<table align="center" cellpadding="0" cellspacing="0" style="width: 700px;height:380px; background-color:#fff; vertical-align: top">
+  <tbody>
+    <tr>
+      <td style="padding:12px 34px"><table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td width="207" height="49" align="center" valign="middle" style="width:207px;height: 49px;border-bottom: 2px solid #3eaf0e; text-align:center"><span style="padding-top:16px; float:left; width:207px; text-align:center; font-size:24px; font-weight:bold"><!--{CONFIG website_name}--></span></td>
+              <td width="405" height="49" style="text-align: right;padding:0 10px 0 0;color:#e1e1e1;vertical-align: bottom;font-size:12px;border-bottom: 2px solid #3eaf0e;height: 49px;"><a href="{BASE_URL}" target="_blank">网站主页</a><span style="margin:0 5px">|</span><a href="{BASE_URL}" target="_blank">关于我们</a>
+              <div style="height: 10px;overflow: hidden;"></div></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right;font-family:microsoft yahei;font-size:14px;line-height: 38px;color:#b4b4b4 ;padding:0 10px;">反馈邮箱 : <a href="mailto:{$webmaster_email}" style="color:#b4b4b4;text-decoration: none" target="_blank">{$webmaster_email}</a></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size: 18px;color:#565656;padding:20px 0 70px"><p style="text-indent: 0">亲爱的用户{$username}：</p>
+                <p>您好，首先感谢您对于<!--{CONFIG website_name}-->的支持，我们在下面列出您的注册详细，确保您的账号安全。验证您的电子邮件地址，请点击此链接：。</p>
+                <p><big style="font: 16px/18px Arial, Helvetica, sans-serif;"><b><a href="{BUILDURL admin/auth/activate/$uid/$new_email_key}" style="color: #3366cc;">完成您的注册...</a></b></big></p>
+                <p>链接不起作用？复制以下链接到浏览器地址栏：</p>
+                <p><nobr><a href="{BUILDURL admin/auth/activate/$uid/$new_email_key}" style="color: #3366cc;">{BUILDURL admin/auth/activate/$uid/$new_email_key}</a></nobr></p>
+                <p></p>
+                <ol>
+                  <li>请验证您的电子邮件。</li>
+                  <li>在{$activation_period}个小时内，否则将成为您的注册无效。</li>
+                  <li>您将不得不再次注册，或联系网站管理员。</li> 
+                </ol>
+                <p></p>
+                <p>&nbsp;</p></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right;color:#666666;line-height: 24px;font-size: 14px;padding:0 0 25px;font-family:microsoft yahei;"><p style="margin:0;font-size:12px;">此为系统邮件，请勿回复&nbsp;&nbsp;Copyright&nbsp; &copy; &nbsp;<!--{CONFIG website_name}-->&nbsp;<!--{echo date('Y',time())}-->&nbsp;All&nbsp;Right&nbsp;Reserved</p>
+                <!--{CONFIG website_name}-->团队
+                <br>
+                <span style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(204, 204, 204); " t="5" times="">
+                <!--{echo date('Y年m月d日',time())}-->
+                </span></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>

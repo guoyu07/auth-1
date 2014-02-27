@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTH XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTH/xhtml1-transitional.dTH">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><!--{CONFIG website_name}-->后台管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="stylesheet" href="{STYLES}admin/login.css" type="text/css" />
+<link href="{STYLES}artdialog.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="append"></div>
+<script type="text/javascript">
+function $(id) {
+	return document.getElementById(id);
+}
+</script>
+<div class="container">
+  <form action="{BUILDURL admin/auth/sendagain}" method="post" target="_top"  onsubmit="return checkform(this);" id="loginform" name="loginform">
+    <h2 style="display:none"><!--{CONFIG website_name}-->后台管理</h2>
+    <div class="serContBox">
+      <div class="serLoginLeft"><img src="{BASE_STYLES}admin/images/serimgl.jpg"/></div>
+      <div class="serLoginRight">
+        <h3>账号激活</h3>
+        <ul class="serInput">
+          <li> <span class="sertext">电子邮箱:</span> <span class="serinbox">
+            <input type="text" name="email" class="sertxt" id="email" value="">
+            </span>
+            <div class="clear"></div>
+          </li> 
+          <li> <span class="sertext">验证码:</span> <span class="serinbox" style="position:relative">
+            <input type="text" name="imgcode" class="sertxt" id="imgcode" value="" style="width:80px;"  onfocus="document.getElementById('showcode').style.display='';" />
+            <div  id="showcode" CLASS="" style="position:absolute;top:0px;left:100px;display:none; cursor:pointer"> <img src="{BUILDURL api/authcode/show}" onclick="changcode(this);" alt="点击刷新" title="点击刷新" lang="{BUILDURL api/authcode/show}"/> </div>
+            </span>
+            <div class="clear"></div>
+          </li>
+          <li> <span class="serbtl">
+            <input type="hidden" name="dosubmit" value="1" />
+            <input type="submit" name="submit" value="发&nbsp;送" class="serbtn" tabindex="3">
+            </span> 
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="footer">版权所有 © <a href="{BASE_URL}" target="_blank"><!--{CONFIG website_name}--></a></div> 
+<script type="text/javascript" src="{JAVASCRIPT}artDialog.js"></script>
+<script language="javascript">
+  function checkform(theform) {
+    if (theform.username.value == '') {
+      alert('用户名不能为空');
+      return false;
+    }
+    if (theform.password.value == '') {
+      alert('密码不能为空');
+      return false;
+    }
+  }
+  function changcode(obj) {
+    obj.src = "{BUILDURL api/authcode/show}?" + Math.random()
+  }
+</script>
+<!--{if isset($_GET['msg']) && $_GET['msg']}-->
+<script>
+showMessageBox('网页提示',"{$_GET['msg']}",0,350,'',0,0,1,0,1,1);
+</script>
+<!--{/if}-->
+</body>
+</html>

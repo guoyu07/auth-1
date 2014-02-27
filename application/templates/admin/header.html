@@ -1,0 +1,85 @@
+<!--{if $format!='html'}-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+<!--{CONFIG website_name}-->
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet"  type="text/css" media="all"href="{BASE_STYLES}style.css" />
+<link rel="stylesheet"  type="text/css" media="all"href="{BASE_STYLES}dtree.css"  />
+<link rel="stylesheet"  type="text/css" media="all"href="{BASE_STYLES}buttons.css"  />
+<script type="text/javascript">
+var BASE_URL="{BASE_URL}";
+var SITE_URL="{SITE_URL}" ; 
+var STYLES_URL="{STYLES}" ; 
+var JAVASCRIPT_URL="{JAVASCRIPT}" ; 
+var SYSTEMBUILDURL="{SYSTEM_URL}";   
+var BASE_STYLES="{BASE_STYLES}"; 
+var BASE_JAVASCRIPT="{BASE_JAVASCRIPT}"; 
+var BASE_IMAGES="{BASE_IMAGES}"; 
+</script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}jquery-1.4.2.js"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}jquery.pjax.js"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}artdialog-pake.js?skin=idialog"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}iframetools.source.js"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}plugins/datepicker/wdatepicker.js"></script>
+</head>
+<body>
+<script type="text/javascript"> 
+
+(function (config) {
+    config['lock'] = false;
+    config['fixed'] = true;
+    config['okVal'] = '确认';
+    config['cancelVal'] = '取消'; 
+})(art.dialog.defaults);
+
+document.onreadystatechange = subSomething;
+function subSomething() {  
+	if(document.readyState == "complete"){ 
+		 
+	} 
+} 
+function DrawImage(ImgD,FitWidth,FitHeight){  
+    var image=new Image();  
+    image.src=ImgD.src;  
+    if(image.width>0 && image.height>0){  
+        if(image.width/image.height>= FitWidth/FitHeight){  
+            if(image.width>FitWidth){  
+                ImgD.width=FitWidth;  
+                ImgD.height=(image.height*FitWidth)/image.width;  
+            }  
+            else{  
+                ImgD.width=image.width;  
+                ImgD.height=image.height;  
+            }  
+        }  
+        else{  
+            if(image.height>FitHeight){  
+                ImgD.height=FitHeight;  
+                ImgD.width=(image.width*FitHeight)/image.height;  
+            }  
+            else{  
+                ImgD.width=image.width;  
+                ImgD.height=image.height;  
+            }  
+        }  
+    }  
+}
+</script>
+<div class="header">
+  <h3> <a class="logo" href="{BUILDURL admin}" title="{CONFIG website_name}" style="background-image:url('{BASE_IMAGES}logo.png')">
+    <!--{CONFIG website_name}-->
+    </a></h3>
+  <div id="uinfo"> <span>欢迎您：{echo isset($this->user_auth->ucdata['username'])?$this->user_auth->ucdata['username']:'';}</span>
+    <p>消&nbsp;息：({echo isset($this->user_auth->ucdata['notice'])?$this->user_auth->ucdata['notice']:'';})</p>
+    <h1><a href="{BUILDURL admin/avatar}"><img src="{BUILDURL api/avatar/show/{echo isset($this->user_auth->ucdata['uid'])?$this->user_auth->ucdata['uid']:'0'}}?uid={echo isset($this->user_auth->ucdata['uid'])?$this->user_auth->ucdata['uid']:'0'}"  onerror="this.onerror=null;this.src='{BASE_IMAGES}noavatar.gif'"  /></a></h1>
+  </div>
+  <div id="snnav"> </div>
+</div>
+<iframe  id="dopost" name="dopost" style="display:none" ></iframe>
+<div class="wrap" id="wrap">
+<div class="side" id="side" ></div>
+<div class="mainbox" id="mainbox">
+<!--{/if}-->

@@ -1,0 +1,19 @@
+<!--{if $format!='html'}-->
+</div>
+<div id="footer" class="footer">
+  <!--{CONFIG copyright}-->  </div>
+</div>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}common.js"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}ajaxcategory.js"></script>
+<script>
+<!--{if isset($_GET['msg']) && $_GET['msg']}-->
+//showMessageBox('网页提示',"{$_GET['msg']}",0,350,'',0,0,1,0,1,1);
+art.dialog.tips('{$_GET["msg"]}');
+<!--{/if}--> 
+$(document).ready(function(){
+	$("a").pjax("#mainbox");
+});
+</script>
+</body>
+</html>
+<!--{/if}-->

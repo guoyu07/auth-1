@@ -1,0 +1,87 @@
+a.button, input.button { display: inline-block; padding: 5px; font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 12px; color: #3C3C3D; text-shadow: 1px 1px 0 #FFFFFF;  white-space: nowrap; overflow: visible; cursor: pointer; text-decoration: none; border: 1px solid #CACACA; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; outline: none; position: relative; zoom: 1; line-height: 1.11; *display: inline; *vertical-align: middle; }
+input.button { margin-left: 0; margin-right: 0; *padding: 5px 5px 3px 5px; }
+a.button { -moz-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; -webkit-touch-callout: none;}
+input.button::-moz-focus-inner { border: 0; padding:0px; }
+a.button.primary, input.button.primary { font-weight: bold }
+input.button:focus,a.button:hover, 
+input.button:hover { color: #FFFFFF; border-color: #388AD4; text-decoration: none; text-shadow: -1px -1px 0 rgba(0,0,0,0.3); background-position: 0 -40px; background-color: #2D7DC5; }
+a.button:active, input.button:active,
+a.button.active, input.button.active { background-position: 0 -81px; border-color: #347BBA; background-color: #0F5EA2; color: #FFFFFF; text-shadow: none; }
+a.button:active, input.button:active { top: 1px }
+a.button.negative:hover, input.button.negative:hover { color: #FFFFFF; background-position: 0 -121px; background-color: #D84743; border-color: #911D1B; }
+a.button.negative:active, input.button.negative:active,
+a.button.negative.active, input.button.negative.active { background-position: 0 -161px; background-color: #A5211E; border-color: #911D1B; }
+a.button.positive:hover, input.button.positive:hover { background-position: 0 -280px; background-color: #96ED89; border-color: #45BF55; }
+a.button.positive:active, input.button.positive:active,
+a.button.positive.active, input.button.positive.active { background-position: 0 -320px; background-color: #45BF55; }
+a.button.pill, input.button.pill { -webkit-border-radius: 19px; -moz-border-radius: 19px; border-radius: 19px; padding: 5px 10px 4px 10px; *padding: 4px 10px; }
+a.button.left, input.button.left { -webkit-border-bottom-right-radius: 0px; -webkit-border-top-right-radius: 0px; -moz-border-radius-bottomright: 0px; -moz-border-radius-topright: 0px; border-bottom-right-radius: 0px; border-top-right-radius: 0px; margin-right: 0px; border-right: none; }
+a.button.middle, input.button.middle { margin-right: 0px; margin-left: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-right: none; }
+a.button.right, input.button.right { -webkit-border-bottom-left-radius: 0px; -webkit-border-top-left-radius: 0px; -moz-border-radius-bottomleft: 0px; -moz-border-radius-topleft: 0px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; margin-left: 0px; }
+a.button.left:active, input.button.left:active,
+a.button.middle:active, input.button.middle:active,
+a.button.right:active, input.button.right:active { top: 0px }
+a.button.big, input.button.big { font-size: 16px; padding-left: 14px; padding-right: 17px; }
+input.buttonbutton.big { *padding: 4px 17px 2px 17px; }
+a.button span.icon, input.button span.icon { display: inline-block; width: 14px; height: 12px; margin: auto 7px auto auto; position: relative; top: 0; *top: 0px; background-image: url('../images/buttons_icons.png'); background-repeat: no-repeat; }
+a.big.button span.icon, input.button.big span.icon { top: 0px }
+a.button span.icon.book, input.button span.icon.book { background-position: 0 0 }
+a.button:hover span.icon.book, input.button:hover span.icon.book { background-position: 0 -15px }
+a.button span.icon.calendar, input.button span.icon.calendar { background-position: 0 -30px }
+a.button:hover span.icon.calendar, input.button:hover span.icon.calendar { background-position: 0 -45px }
+a.button span.icon.chat, input.button span.icon.chat { background-position: 0 -60px }
+a.button:hover span.icon.chat, input.button:hover span.icon.chat { background-position: 0 -75px }
+a.button span.icon.check, input.button span.icon.check { background-position: 0 -90px }
+a.button:hover span.icon.check, input.button:hover span.icon.check { background-position: 0 -103px }
+a.button span.icon.clock, input.button span.icon.clock { background-position: 0 -116px }
+a.button:hover span.icon.clock, input.button:hover span.icon.clock { background-position: 0 -131px }
+a.button span.icon.cog, input.button span.icon.cog { background-position: 0 -146px }
+a.button:hover span.icon.cog, input.button:hover span.icon.cog { background-position: 0 -161px }
+a.button span.icon.comment, input.button span.icon.comment { background-position: 0 -176px }
+a.button:hover span.icon.comment, input.button:hover span.icon.comment { background-position: 0 -190px }
+a.button span.icon.cross, input.button span.icon.cross { background-position: 0 -204px }
+a.button:hover span.icon.cross, input.button:hover span.icon.cross { background-position: 0 -219px }
+a.button span.icon.downarrow, input.button span.icon.downarrow { background-position: 0 -234px }
+a.button:hover span.icon.downarrow, input.button:hover span.icon.downarrow { background-position: 0 -249px }
+a.button span.icon.fork, input.button span.icon.fork { background-position: 0 -264px }
+a.button:hover span.icon.fork, input.button:hover span.icon.fork { background-position: 0 -279px }
+a.button span.icon.heart, input.button span.icon.heart { background-position: 0 -294px }
+a.button:hover span.icon.heart, input.button:hover span.icon.heart { background-position: 0 -308px }
+a.button span.icon.home, input.button span.icon.home { background-position: 0 -322px }
+a.button:hover span.icon.home, input.button:hover span.icon.home { background-position: 0 -337px }
+a.button span.icon.key, input.button span.icon.key { background-position: 0 -352px }
+a.button:hover span.icon.key, input.button:hover span.icon.key { background-position: 0 -367px }
+a.button span.icon.leftarrow, input.button span.icon.leftarrow { background-position: 0 -382px }
+a.button:hover span.icon.leftarrow, input.button:hover span.icon.leftarrow { background-position: 0 -397px }
+a.button span.icon.lock, input.button span.icon.lock { background-position: 0 -412px }
+a.button:hover span.icon.lock, input.button:hover span.icon.lock { background-position: 0 -427px }
+a.button span.icon.loop, input.button span.icon.loop { background-position: 0 -442px }
+a.button:hover span.icon.loop, input.button:hover span.icon.loop { background-position: 0 -457px }
+a.button span.icon.magnifier, input.button span.icon.magnifier { background-position: 0 -472px }
+a.button:hover span.icon.magnifier, input.button:hover span.icon.magnifier { background-position: 0 -487px }
+a.button span.icon.mail, input.button span.icon.mail { background-position: 0 -502px }
+a.button:hover span.icon.mail, input.button:hover span.icon.mail { background-position: 0 -514px }
+a.button span.icon.move, input.button span.icon.move { background-position: 0 -526px }
+a.button:hover span.icon.move, input.button:hover span.icon.move { background-position: 0 -541px }
+a.button span.icon.pen, input.button span.icon.pen { background-position: 0 -556px }
+a.button:hover span.icon.pen, input.button:hover span.icon.pen { background-position: 0 -571px }
+a.button span.icon.pin, input.button span.icon.pin { background-position: 0 -586px }
+a.button:hover span.icon.pin, input.button:hover span.icon.pin { background-position: 0 -601px }
+a.button span.icon.plus, input.button span.icon.plus { background-position: 0 -616px }
+a.button:hover span.icon.plus, input.button:hover span.icon.plus { background-position: 0 -631px }
+a.button span.icon.reload, input.button span.icon.reload { background-position: 0 -646px }
+a.button:hover span.icon.reload, input.button:hover span.icon.reload { background-position: 0 -660px }
+a.button span.icon.rightarrow, input.button span.icon.rightarrow { background-position: 0 -674px }
+a.button:hover span.icon.rightarrow, input.button:hover span.icon.rightarrow { background-position: 0 -689px }
+a.button span.icon.rss, input.button span.icon.rss { background-position: 0 -704px }
+a.button:hover span.icon.rss, input.button:hover span.icon.rss { background-position: 0 -719px }
+a.button span.icon.tag, input.button span.icon.tag { background-position: 0 -734px }
+a.button:hover span.icon.tag, input.button:hover span.icon.tag { background-position: 0 -749px }
+a.button span.icon.trash, input.button span.icon.trash { background-position: 0 -764px }
+a.button:hover span.icon.trash, input.button:hover span.icon.trash { background-position: 0 -779px }
+a.button span.icon.unlock, input.button span.icon.unlock { background-position: 0 -794px }
+a.button:hover span.icon.unlock, input.button:hover span.icon.unlock { background-position: 0 -809px }
+a.button span.icon.uparrow, input.button span.icon.uparrow { background-position: 0 -824px }
+a.button:hover span.icon.uparrow, input.button:hover span.icon.uparrow { background-position: 0 -839px }
+a.button span.icon.user, input.button span.icon.user { background-position: 0 -854px }
+a.button:hover span.icon.user, input.button:hover span.icon.user { background-position: 0 -869px }

@@ -1,0 +1,43 @@
+<!--{template admin/header}-->
+
+<h3><strong>授权管理</strong>&nbsp;&nbsp;<a href="{BUILDURL admin/competence}">角色列表</a>&nbsp;&nbsp;<a href="{BUILDURL admin/permission/add}">添加授权</a></h3>
+<div>
+  <form id="J_search_form" action="{BUILDURL admin/permission/index}">
+    <input type="text" class="f-text" value="" autocomplete="off" name="name" />
+    <input type="submit" class="button"  />
+  </form>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"  class="msgtable">
+  <thead>
+    <tr>
+      <td width="14%" >授权url</td>
+      <td width="12%" >授权名</td>
+      <td width="12%" >分类</td>
+      <td width="22%" >创建时间</td>
+      <td width="24%" >更新时间</td>
+      <td width="16%" >操作</td>
+    </tr>
+  </thead>
+  <!--{loop $datalist $k $v}-->
+  <tr>
+    <td >{$v['url']}</td>
+    <td >{$v['subject']}</td>
+    <td >{$roles[$v['pid']]['name']}</td>
+    <td>{echo date('Y-m-d H:i:s',$v['datetime'])}</td>
+    <td>{echo date('Y-m-d H:i:s',$v['updatetime'])}</td>
+    <td ><a  href="{BUILDURL admin/permission/edit/$v['id']}">修改</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a   href="{BUILDURL admin/permission/delete/$v['id']}" lang="delete" onclick="return deletedata('{BUILDURL admin/permission/delete/$v['id']/ajax}','{BUILDURL admin/permission}')">删除</a></td>
+  </tr>
+  <!--{/loop}-->
+</table>
+<br/>
+<br/>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="clear:both"  >
+  <tr>
+    <td align="center" ><center>
+        {$pagination}
+      </center></td>
+  </tr>
+</table>
+<br/>
+<br>
+<!--{template admin/footer}-->

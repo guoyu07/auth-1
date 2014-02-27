@@ -1,0 +1,29 @@
+<table width="750" border="0" cellpadding="0" cellspacing="0"class="msgtable"> 
+  <tr>
+    <td width="10%" height="21">用户ID</td>
+    <td width="16%" >用户名</td>
+    <td width="15%" >邮箱</td>
+    <td width="28%" >用户角色</td>
+    <td width="19%" >创建时间</td>
+    <td width="12%" >操作</td>
+  </tr>
+  <!--{loop $datalist $k $v}-->
+  <tr>
+    <td>{$v['uid']}</td>
+    <td >{$v['username']}</td>
+    <td >{$v['email']}</td>
+    <td >{$userroles[$v['roleid']]['subject']}</td>
+    <td >{$v['created']}</td>
+    <td ><a  href="#" onclick="set_numberidtables('{$v['username']}','{$v['uid']}')">选择</a></td>
+  </tr>
+  <!--{/loop}-->
+</table>
+<br/>
+<br/>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="clear:both"  >
+  <tr>
+    <td align="center" ><center>
+        {$pagination}
+      </center></td>
+  </tr>
+</table> 

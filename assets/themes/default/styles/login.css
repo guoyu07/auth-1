@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* 
+	//@CSS		Document 
+	//@Author:	Miracle
+*/
+
+* { word-wrap:break-word; outline:none; }
+body { text-align:center; background:#d8dbe4 url(../images/body_bg.jpg) repeat-x; }
+body, td, input, textarea, select, button { color:#666; font:12px "Lucida Grande", Verdana, Lucida, Helvetica, Arial, 'Simsun', sans-serif; }
+body, ul, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; }
+a { color:#2366A8; text-decoration:none; }
+a:hover { text-decoration:underline; }
+a img { border:none; }
+em, cite, th { font-style:normal; font-weight:normal; }
+table { border-collapse:collapse; }
+/* form */
+textarea, input { padding:2px; border:1px solid; border-color:#666 #eee #eee #666; }
+input.txt:hover, input.txt:focus, textarea:hover, textarea:focus { border-color:#09C; background:#F5F9FD; }
+/* main header */
+.mainhd { text-align:left; height:69px; line-height:69px; background:url(../images/bg_repx.gif) repeat-x; }
+.logo { float:left; text-indent:-9999px; width:321px; height:46px; background:url(../images/bg_repno.gif) no-repeat 29px 20px; }
+.uinfo { float:right; display:inline; margin-right:40px; }
+.uinfo a { color:#666; }
+.uinfo em { margin-right:5px; font-weight:700; }
+.uinfo p { float:left; }
+.othersoff, .otherson { display:block; margin:10px 0 0 25px; width:151px; height:30px; line-height:30px; text-align:center; background:url(../images/bg_repno.gif) no-repeat 0 -680px; outline:none; }
+.otherson { background:url(../images/bbg_repno.gif) no-repeat 0 -650px; }
+.othersoff:hover, .otherson:hover { text-decoration:none; }
+/* menu */
+.togglemenu { position:absolute; z-index:1000; width:149px; *width:151px;
+text-align:left; border:1px solid #B5CFD9; border-top:none; background:#FFF; opacity:0.8; filter:Alpha(opacity=80); }
+.togglemenu ul { list-style:none; margin:0 2px 2px; padding:10px 0; background:url(../images/bg_repx_hd.gif) repeat-x; }
+.togglemenu a { display:block; padding:5px 15px; color:#666; text-decoration:underline; }
+.togglemenu a:hover { color:#09C; }
+/* header_menu */
+#header_menu { text-align: right; padding-right: 20px; cursor:pointer; }
+/* box */
+.container { text-align:left; margin-top:100px; }
+.note { margin:5px 0; padding:10px; width:580px; border:1px solid #B5CFD9; background:#F5F9FD; }
+.i { padding-left:22px; line-height:19px; background:url(../images/bg_repno.gif) no-repeat -275px -100px; }
+.i a { text-decoration:underline; }
+.i a:hover { text-decoration:none; }
+.mainbox { margin:10px 0; }
+.opt { clear:both; overflow:hidden; }
+.opt th { padding:5px 0; font-weight:700; text-align:left; }
+.opt td { padding-bottom:10px; }
+.opt .txt, .opt textarea { vertical-align:middle; margin-right:10px; width:250px; }
+.opt select { vertical-align:middle; margin-right:10px; }
+.opt .area { height:80px; }
+.opt .bigarea { width: 500px; height: 80px; }
+.opt label { margin-right:20px; }
+.opt p { float:left; line-height:180%; }
+.correct td { color:#090; }
+.correct .txt { padding-right:20px; width:160px; background:url(../images/bg_repno.gif) no-repeat 165px -198px; }
+.error td { color:#F60; }
+.error .txt { padding-right:20px; width:160px; background:url(../images/bbg_repno.gif) no-repeat 167px -346px; }
+.datalist { clear:both; width:100%; border-top:2px solid #B5CFD9; border-bottom:2px solid #B5CFD9; }
+.datalist th { line-height:250%; text-align:left; background:url(../images/bbg_repx.gif) repeat-x 0 bottom; color:#9EBECB; font-size:12px; }
+.datalist td { padding:5px 0; background:url(../images/bbg_repx.gif) repeat-x 0 bottom; }
+.currenttr td { background:#F2F9FD url(../images/bbg_repx.gif) repeat-x 0 bottom; }
+.datalist a { text-decoration:underline; }
+.datalist a:hover { text-decoration:none; }
+.datalist .txt { width:90%; overflow:hidden; }
+.datalist .txtnobd { width:90%; border:1px solid #FFF; text-align:right; overflow:hidden; cursor:pointer; }
+.datalist .bigarea { width: 500px; height: 80px; }
+.tdinput { padding:0 30px 5px 0; width:160px; }
+.tdarrow { width:20px; }
+.option { width:10%; }
+.username { width:20%; font-weight:700; }
+.date { width:25%; }
+.ip { width:15%; }
+.fixwidth { width: 100%; }
+.fixwidthdec { width:580px; }
+#loginform { overflow:hidden; margin:90px auto 20px auto; width:850px; }
+.login { float:left; margin-top:5px; text-align:right; font:bold 14px "����"; }
+.login p { margin:10px 5px; }
+.loginbtn { padding-left:53px; text-align:left; }
+.login .txt { width:160px; }
+.checkcode { margin-top:-3px; *margin-top:-6px;
+width:70px; height:21px; cursor:pointer; vertical-align:middle; }
+.loginbox { padding-right:40px; width:290px; height:120px; line-height:150%; }
+.loginbox h1 { text-indent:-9999px; margin:10px 0 10px; height:25px; background:url(../images/bg_repno.gif) no-repeat 0 -750px; }
+.ajax { width:360px; border:1px solid #89B3C2; }
+.ajaxbg { margin:2px; padding:15px; background:url(../images/bg_repx_hc.gif) repeat-x; }
+.footer { display:block; line-height:25px; }
+/* list */
+.dblist { list-style:none; margin-top:5px; }
+.dblist li { float:left; margin:0 0 0 -3px; *margin:0 0 5px -3px;
+width:25%; height:auto; *height:16px;
+}
+.memlist { list-style:none; margin:7px 0 25px; padding-top:2px; border-top:2px solid #B5CFD9; }
+.memlist li { clear:both; overflow:hidden; zoom:1; padding:5px 0; *padding:1px 0 5px;
+line-height:150%; background:url(bg_repx.gif) repeat-x 0 bottom; }
+.memlist em { float:left; width:120px; }
+.memlist .memcont { width:480px; }
+.tiplist { float:right; list-style:none; width:320px; }
+.tiplist li { line-height:160%; }
+.optlist { clear:both; list-style:none; margin:5px 0; width:100%; }
+.optlist li { line-height:180%; }
+/* calendar */
+.table1 th { padding:5px; }
+.table1 td { padding:2px 5px; }
+.calendarmenu { position:absolute; padding:9px 0 0 9px; *padding:9px;
+border:1px solid #B5CFD9; background:#FFF; opacity:0.8; filter:Alpha(opacity=80); }
+/* widget */
+.statimg { vertical-align:middle; margin:0 5px 2px 0 !important; *margin:0 5px 0 0 !important;
+*margin:0 5px 2px 0;
+}
+.line { clear:both; position:relative; margin:10px 0; border-top:1px solid #CCC; }
+.line p { position:absolute; top:14px; right:50px; font-weight:700; }
+.margintop { margin-top:10px; }
+.marginbot { margin-bottom:10px; }
+.nomargin { margin:0; }
+.nobg { background:none; }
+.nobg td { background:none; }
+.center { text-align:center; }
+.bold { font-weight:700; }
+.red { color:red; }
+.green { color:green; }
+.tabhead { width: 100%; clear: both; background: url(../images/bg_tab_line.gif) repeat-x bottom; }
+.tabhead li { line-height: 1.2em; display:block; padding:5px 7px 2px 7px; border:1px solid #CCC; border-bottom:0px solid #B5CFD9; color:#666; float:left; margin-right:5px; }
+.tabhead li.checked { background:#F2F9FD; font-weight: 800 }
+.tabbody { padding: 1em; clear: both; border:1px solid #B5CFD9; border-top: 0px; background:#F2F9FD; }
+/*ser again mondify Miracle*/
+.clear { clear:both; }
+.container h2 { font-size:32px; color:#9396a9; font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti; text-align:center; height:70px; letter-spacing:0.1em; }
+.container .serContBox { width:100%; }
+.serContBox .serLoginRight, .serContBox .serLoginLeft { float:left; }
+.serLoginLeft img { width:366px; height:286px; }
+.serContBox .serLoginRight { background:url(../images/serimgr.jpg) no-repeat top; width:426px; min-height:286px; _height:286px; padding-left:20px; }
+.serLoginRight h3 { font-size:18px; font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti; color:#151616; margin-top:5px; background:url(../images/serh.gif) no-repeat; padding:5px 0 0 30px; height:35px; }
+.serLoginRight ul.serInput { margin:0; padding:0; }
+.serLoginRight ul.serInput li { list-style:none; padding-left:5px; margin-top:15px; }
+.serLoginRight ul.serInput li span.sertext { float:left; width:80px; font-size:14px; color:#757575; padding-top:6px; }
+.serLoginRight ul.serInput li span.serinbox { float:left; }
+span.serinbox input.sertxt, btn { width:190px; height:25px; border:1px solid #bab9b7; line-height:23px; }
+.serLoginRight ul.serInput li span.serbtl { float:left; margin-left:60px; }
+span.serbtr input.serbtn, span.serbtl input.serbtn { width:74px; height:34px; border:none; background:url(../images/btnbg.jpg) no-repeat; color:#101010; }
+.serLoginRight ul.serInput li span.serbtr { float:left; margin-left:20px; }

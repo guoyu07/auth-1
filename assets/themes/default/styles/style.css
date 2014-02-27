@@ -1,0 +1,106 @@
+@charset utf-8;
+
+html, body { height: 100%; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section { display: block; }
+b, strong { font-weight: bold; }
+img { color: transparent; font-size: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; }
+ol, ul { list-style: none; }
+li { display: list-item; }
+table { border-collapse: collapse; border-spacing: 0; }
+th, td, caption { font-weight: normal; vertical-align: top; text-align: left; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+sub, sup, small { font-size: 75%; }
+sub, sup { line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+svg { overflow: hidden; }
+body { background:#FFF url(../images/wrapbg.gif) repeat-y 0 0; text-align:center; height:100%; }
+body, td, input, textarea, select, button { color:#555; font:12px/1.6em Helvetica, Arial, sans-serif; }
+body, ul, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; }
+a { color:#2366A8; text-decoration:none; }
+a:hover { text-decoration:underline; }
+em, cite, th { font-style:normal; font-weight:400; }
+table { empty-cells:show; border-collapse:collapse; }
+.header { height:80px; line-height:80px; background:url(../images/headbg.gif) repeat-x; }
+.header .logo { width: 296px; background: url(../images/logo.png) no-repeat 1px -0px; ; float: left; text-indent: -9999px; overflow: hidden; }
+.header #uinfo { float: right; height:44px; overflow:hidden; width:200px; clear:both; position:absolute; right:0px; top:0px; color:#2366A8 }
+.header #uinfo h1 { float:left; width:50px; margin-top:5px; position:absolute; right:10px; }
+.header #uinfo h1 a { float:left; width:39px; height:39px; }
+.header #uinfo h1 img { float:left; width:45px; height:39px; }
+.header #uinfo span { float: left; width:140px; position:absolute; top:5px; line-height:25px; text-align:right; right:65px; font-weight:bold; overflow:hidden; height:25px; }
+.header #uinfo p { float: left; width:140px; position:absolute; top:23px; line-height:25px; text-align:right; right:65px; font-weight:bold }
+.header #snnav { display:inline; float: right; height:24px; margin-left:200px; line-height:24px; position:absolute; top:56px; right:0px; }
+.header #snnav li { position:relative; display:inline; float:left; margin-right:3px; font-family:"Microsoft YaHei"; font-size:14px; font-weight:bold; }
+.header #snnav li.ck { color:#fff; background:#006dc8 url(../images/nck_bg.gif); background-repeat:no-repeat; }
+.header #snnav li.ck a { color:#fff; }
+.header #snnav li.nav_group { float:left; }
+.header #snnav li.nav_group a { color:#e63233; }
+.header #snnav li b { position:absolute; right:0; top:-7px; width:23px; height:14px; background:url(../images/btn.png) no-repeat 0 -280px; text-indent:-9999em; overflow:hidden; }
+.header #snnav li.nav_group b { width:21px; height:17px; background-position:-30px -280px; }
+.header #snnav li a { display:block; width:66px; height:24px; color:#2366A8; text-align:center; }
+.header #snnav li a.on { color:#fff; background:#006dc8 url(../images/btn.png) no-repeat 0 -332px; }
+.header #snnav li a:hover.on { background-position:0 -332px; }
+.header #snnav li a:hover { background-position:0 -356px; text-decoration:none; }
+.header #snnav li.nav_group a:hover { background:none; color:#f60; text-decoration:underline; }
+.header #snnav ul { float:right; }
+.header #snnav ul li ul { position: absolute; display: none; border-bottom: 1px solid #006dc8; right:-3px; }
+.header #snnav ul li ul li { display: block; width: 180px; border: 1px solid #006dc8; background: #006dc8; clear: left; border-bottom: none; padding: 0; height: auto; }
+.header #snnav ul li ul li a { width:auto; color: #333; text-decoration: none; padding: 5px 1em 5px 1em; height: auto; display: block; text-align: left; text-shadow: none; }
+.header #snnav ul li ul li a:hover { color: #fff; background: #A6D0E7; }
+.wrap { padding-left:180px; text-align:left; }
+#side { width:179px; position:absolute; top:80px; left:0; padding-top:10px; }
+#side a { height:24px; line-height:24px; display:block; border:1px solid #F2F9FD; color:#666; margin:2px 2px 2px 0; padding:4px 0 2px 30px; }
+#side a:hover { color:#007FB2; text-decoration:none; margin-right:0; width:149px; border:1px solid #B5CFD9; border-right:1px solid #FFF; background:#FFF; }
+#side a.sideul { padding-left:6px; }
+#side .sideul { font-size:14px; height:28px; line-height:28px; font-weight:700; }
+#side .sidelist { background:url(../images/listicon.gif) 10px 50% no-repeat; }
+#side a.tabon { text-decoration:none; margin-right:0; width:149px; border:1px solid #B5CFD9; border-right:1px solid #FFF; background:#FFF url(../images/bg_repy.gif) repeat-y; color:#2366A8; }
+#side a.sideul:hover { text-decoration:none; margin-right:0; width:173px; border:1px solid #B5CFD9; border-right:1px solid #FFF; background:#FFF; }
+#side a.sideul.tabon { text-decoration:none; margin-right:0; width:173px; border:1px solid #B5CFD9; border-right:1px solid #FFF; background:#FFF url(../images/bg_repy.gif) repeat-y; color:#2366A8; }
+.subinfo { position:absolute; left:179px; top:20px; width:100px; border:1px solid #B5CFD9; border-left:1px solid #FFF; background-color:#FFF; }
+.subinfo a { float:left; clear:both; line-height:20px; width:100px; }
+.mainbox { margin:15px 30px 15px 15px; }
+.mainbox div.mainmsg { line-height:22px; padding-left:20px; }
+.mainbox div.submsg { line-height:22px; padding-left:40px; }
+.mainbox div.mainmsg:first-letter { padding-left:2em; }
+.mainbox h3 { font-size:14px; border-left:5px solid #FF9000; padding-left:15px; margin:10px 0 5px; }
+.mainbox h4 { width:90%; color:#333; }
+.mainbox h4 i { color:#aaa; }
+.mainbox h5 { font-size:12px; border-left:3px solid #0095C8; padding-left:15px; height:16px; line-height:16px; margin:10px 0 5px; }
+.mainbox h6 { font-size:12px; padding-left:15px; height:24px; line-height:24px; margin:4px 0 2px; }
+.mainbox h6:hover { background:#F9F9F9; }
+.mainbox h6 a { padding-left:24px; color:#006C9F; }
+.mainbox h6 a.spread, em.spread { background:url(../images/spread.gif) no-repeat 0 50%; }
+.mainbox h6 a.shrink, em.shrink { background:url(../images/shrink.gif) no-repeat 0 50%; }
+.tdpage { text-align:right; }
+.pages { clear:both; margin:10px 0; }
+.pages em, .pages a, .pages strong { text-decoration:none; margin-left:5px; border:1px solid #E5E5E5; padding:2px 5px; }
+.pages a:hover { text-decoration:none; border:1px solid #09C; background:#09C; color:#FFF; }
+.pages strong { border:none; font-weight:700; }
+.code, .blockcode { background:#F3F3F3 url(../images/codeicon.gif) no-repeat 5px 5px; border:1px solid #CCC; margin:10px 0; padding:30px 20px 10px; }
+.blockcode { background:#F3F3F3 url(../images/citeicon.gif) no-repeat 8px 6px; }
+cite { color:#000; margin:0; padding:0; }
+pre { font-family:Courier, Courier New; font-weight:400; color:#000; margin:0; padding:0; }
+.msgtable { width:90%; }
+.msgtable th { font-weight:700; width:200px; border:1px solid #bbb; background-color:#F3F3F3; padding:4px; }
+.msgtable thead th { background:#F3F3F3; color:#333; }
+.msgtable td { border:1px solid #bbb; padding:4px; }
+.msgtable thead td { font-weight:700; background:#F3F3F3; color:#333; }
+.msgtable tfoot .msgtable td { border:1px dotted #bbb; background:#FFF; }
+.msgtable em { font-weight:700; width:50px; float:left; text-align:right; padding-right:10px; }
+.msgtable td.max em { width:80px; }
+.line { border-top:1px dotted #CCC; margin:20px 30px; }
+.footer { border-top:1px solid #CCC; text-align:center; line-height:150%; font-family:Arial, sans-serif; font-size:12px; margin:10px 5px; padding:10px 0; }
+.footer a { display:inline; padding-left:4px; }
+.pic { height:100%; }
+.pic th { text-align:center; padding:5px 15px; }
+.pic td { width:10px; }
+.pic th.box { border:1px solid #CCC; }
+.pic td.rr { background:url(../images/arrowr.gif); background-repeat:no-repeat; background-position:left 50%; }
+a img, .radio { border:none; }
+.sgbtn:hover, .othersoff:hover, .otherson:hover { text-decoration:none; }
+.msgtable tfoot th, .msgtable tfoot td { background:#F2F9FD; color:#333; }
+.msgtable tfoot .msgtable, .msgtable tfoot .msgtable th { border:1px dotted #bbb; }
+.msgtable th i, .msgtable td i { color:#bbb; }

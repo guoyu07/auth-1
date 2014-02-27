@@ -1,0 +1,45 @@
+ 
+<div class="footer">版权所有 © <a href="{BASE_URL}" target="_blank"><!--{CONFIG website_name}--></a></div>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}jquery-1.4.2.js"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}artdialog-pake.js?skin=idialog"></script>
+<script type="text/javascript" src="{BASE_JAVASCRIPT}iframetools.source.js"></script> 
+<script language="javascript">
+(function (config) {
+    config['lock'] = false;
+    config['fixed'] = true;
+    config['okVal'] = '确认';
+    config['cancelVal'] = '取消'; 
+})(art.dialog.defaults);
+
+document.onreadystatechange = subSomething;
+function subSomething() {  
+	if(document.readyState == "complete"){ 
+		 
+	} 
+} 
+
+  function checkform(theform) {
+    if (theform.username.value == '') {
+      art.dialog.tips('账号不能为空');
+      return false;
+    }
+    if (theform.password.value == '') {
+      art.dialog.tips('密码不能为空');
+      return false;
+    }
+  }
+  function changcode(obj) {
+    obj.src = "{BUILDURL api/authcode/show}?" + Math.random()
+  }
+</script>
+<!--{if isset($_GET['msg']) && $_GET['msg']}-->
+<script>
+	art.dialog({ 	
+		content:'{$_GET["msg"]}',
+		icon: 'error'
+		}
+	); 
+</script>
+<!--{/if}-->
+</body>
+</html>
