@@ -183,7 +183,7 @@ class CI_Form_validation {
 		$str = '';
 		foreach ( $this->_error_array as $val ) {
 			if ($val != '') {
-				$str .= $prefix . $val . $suffix . "\n";
+				$str .= $prefix . $val . $suffix ;
 			}
 		}
 		

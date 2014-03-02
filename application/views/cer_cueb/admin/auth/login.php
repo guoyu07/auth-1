@@ -39,7 +39,7 @@
           <? } ?>          <li> <span class="serbtl">
             <input type="hidden" name="dosubmit" value="1" />
             <input type="submit" name="submit" value="登&nbsp;录" class="serbtn" tabindex="3">
-            </span> <span class="serbtr"> <a href="http://127.0.0.1:8081/auth/index.php/admin/auth/forgotpassword.html" style="line-height:35px;">忘记密码</a> </span>
+            </span> <span class="serbtr"> <a href="http://127.0.0.1:8081/auth/index.php/admin/auth/forgot_password.html" style="line-height:35px;">忘记密码</a> </span>
             <div class="clear"></div>
           </li>
         </ul>

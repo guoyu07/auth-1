@@ -6,8 +6,9 @@ class Appuser extends CI_Controller {
 	var $data = array ();
 	function __construct() {
 		parent :: __construct();
+		$this->allow = 'admin';
 		$this->load->library('user_auth');
-		$this->user_auth->check_uri_permissions('admin');
+		$this->user_auth->check_uri_permissions($this->allow);
 		$this->load->library('apilibrary');
 		$this->data['banned'][0] = array (
 			'name' => '开放',
@@ -42,11 +43,11 @@ class Appuser extends CI_Controller {
 	}
 	public function index($p = 0) {
 		$p_config['query_string'] = '?' . $_SERVER['QUERY_STRING'];
-		$p_config['base_url'] = 'admin/appuser/index';
+		$p_config['base_url'] = $this->allow.'/appuser/index';
 		$p_config['uri_segment'] = 4;
 		$data = $this->loadmodel->getpage($p_config, $p, 20, '', '*', 'created');
 		$data['userroles'] = $this->userroles();
-		$this->load->view('admin/user_auth/appuser_list', $data);
+		$this->load->view($this->allow.'/auth/appuser_list', $data);
 	}
 	public function edit($uid = NULL) {
 		$this->_Edit_Add($uid);
@@ -69,7 +70,7 @@ class Appuser extends CI_Controller {
 		$datalist['radio_activated'] = $this->formhandler->Radio('activated', $this->data['activated'], '', $datalist['activated']);
 		$datalist['select_roles'] = $this->formhandler->Select('roleid', $userroles, '', $datalist['roleid']);
 		$data['datalist'] = $datalist;
-		$this->load->view('admin/user_auth/appuser_do', $data);
+		$this->load->view($this->allow.'/auth/appuser_do', $data);
 	}
 	/**
 	 * 更改密码
@@ -77,7 +78,7 @@ class Appuser extends CI_Controller {
 	function changepassword() {
 		$data = array ();
 		$data['userinfo'] = $this->user_auth->ucdata;
-		$this->load->view('admin/user_auth/changepassword', $data);
+		$this->load->view($this->allow.'/auth/changepassword', $data);
 	}
 
 	/**
@@ -99,7 +100,7 @@ class Appuser extends CI_Controller {
 				$str = $val->error($v, ' ', ' ');
 				if ($str) {
 					$sfs['msg']=$str;
-					$this->user_auth->redirect('admin/appuser',$sfs);
+					$this->user_auth->redirect($this->allow.'/appuser',$sfs);
 					return 1;
 				}
 			}
@@ -117,7 +118,7 @@ class Appuser extends CI_Controller {
 			$db['banned'] = $this->input->get_post('banned');
 			$db['activated'] = $activated;
 			$this->users->update($db, $uid);
-			$this->user_auth->redirect('admin/appuser', array('msg'=>'修改成功'));
+			$this->user_auth->redirect($this->allow.'/appuser', array('msg'=>'修改成功'));
 			return 1;
 		} else {
 			$db['username'] = $this->input->get_post('username');
@@ -125,7 +126,7 @@ class Appuser extends CI_Controller {
 				$status['status'] = 'success';
 				$status['d'] = '添加成功';
 				$status['url'] = 'appuser';
-				$this->user_auth->redirect($status['url'], $status);
+				$this->user_auth->redirect($this->allow.$status['url'], $status);
 				return 1;
 			} else {
 				$error = '';
@@ -134,7 +135,7 @@ class Appuser extends CI_Controller {
 					$error .= $this->lang->line($v);
 				}
 				$errors['msg']=$error;
-				$this->user_auth->redirect('admin/appuser', $errors);
+				$this->user_auth->redirect($this->allow.'/appuser', $errors);
 			}
 
 		}

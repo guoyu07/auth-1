@@ -15,6 +15,7 @@ class User_auth {
 		$this->ci->load->library('user_auth_event');
 		$this->ci->load->database();
 		$this->ci->load->model('user_auth/users');
+		$this->allow='';
 		$this->autologin();
 	}
 	function login($login, $password, $remember, $login_by_username, $login_by_email) {
@@ -92,21 +93,6 @@ class User_auth {
 		}
 		$url = $this->ci->config->site_url($d ? ($d . '/auth') : 'auth') . '?callback=' . $this->ci->uri->uri_string();
 		$this->redirect($url);
-	}
-	public function redirect($uri = '', $q = '', $method = 'location', $http_response_code = 302) {
-		if (!preg_match('#^https?://#i', $uri)) {
-			$uri = $this->ci->config->site_url($uri);
-		}
-		$uri .= $q ? "?" . http_build_query($q) : "";
-		switch ($method) {
-			case 'refresh' :
-				header("Refresh:0;url=" . $uri);
-				break;
-			default :
-				header("Location: " . $uri, TRUE, $http_response_code);
-				break;
-		}
-		exit ();
 	}
 	private function autologin() {
 		if (!$this->is_logged_in() AND !$this->is_logged_in(FALSE)) {
@@ -538,6 +524,27 @@ class User_auth {
 			$CI->$class = new $name ($parameter);
 		}
 		return $CI->$class;
+	}
+	public function redirect($uri = '', $q = '', $method = 'location', $http_response_code = 302) {
+		if (!preg_match('#^https?://#i', $uri)) {
+			$allow=substr_count($this->allow,'/')?$this->allow:$this->allow.'/';
+			$uri = $this->ci->config->site_url($allow.$uri);
+		}
+		$uri .= $q ? "?" . http_build_query($q) : "";
+		switch ($method) {
+			case 'refresh' :
+				header("Refresh:0;url=" . $uri);
+				break;
+			default :
+				header("Location: " . $uri, TRUE, $http_response_code);
+				break;
+		}
+		exit ();
+	}
+	public function view($view, $vars = array(), $return = FALSE)
+	{
+		$allow=substr_count($this->allow,'/')?$this->allow:$this->allow.'/';
+		return $this->ci->load->view($allow.$view,$vars,$return);
 	}
 	function site_url($uri = '') {
 		return $this->ci->config->site_url($uri);
